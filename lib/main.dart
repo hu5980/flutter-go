@@ -18,11 +18,12 @@ import 'package:flutter_go/utils/data_utils.dart';
 
 //import 'views/welcome_page/index.dart';
 
-const int ThemeColor = 0xFFC91B3A;
+const int ThemeColor =  0xFFC91B3A;
 SpUtil sp;
 var db;
 
 class MyApp extends StatefulWidget {
+
   MyApp() {
     final router = new Router();
 
@@ -79,21 +80,21 @@ class _MyAppState extends State<MyApp> {
   }
 
   showWelcomePage() {
-//    if (_isLoading) {
-//      return Container(
-//        color: const Color(ThemeColor),
-//        child: Center(
-//          child: SpinKitPouringHourglass(color: Colors.white),
-//        ),
-//      );
-//    } else {
-//      // 判断是否已经登录
-//      if (_hasLogin) {
+    if (_isLoading) {
+      return Container(
+        color: const Color(ThemeColor),
+        child: Center(
+          child: SpinKitPouringHourglass(color: Colors.white),
+        ),
+      );
+    } else {
+      // 判断是否已经登录
+      if (_hasLogin) {
         return AppPage();
-//      } else {
-//        return LoginPage();
-//      }
-//    }
+      } else {
+        return LoginPage();
+      }
+    }
   }
 
   @override
